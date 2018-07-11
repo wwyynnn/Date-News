@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Data News</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+	
+    <script src="echarts.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+		<img src="http://m.qpic.cn/psb?/V12oN3I72Ka1KG/A48EajmNeXMnTWhl9Fp1wep0JPL9je4RBNnTpGmxwRI!/b/dPMAAAAAAAAA&bo=KAAoAAAAAAADByI!&rf=viewer_4" alt=""> 
+        <a class="navbar-brand" href="#">&nbsp;华南理工大学-数据新闻课程作品</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="overlay">
+        <div class="container">
+          <h1 class="display-1 text-white">国产电视剧的“世界梦”</h1>
+          <p class="display-3 text-white">——中国制造，改变世界</p>
+		  <p class="one "></br></br></br></br></br><span style="line-height:18px;">如果把一个日本家庭里的“中国制造”都搬走，还能剩啥？
+结果是，参与测试的两个人连身上的“中国制造”衣服都被收走，脱得只穿内裤坐在地板上，看着空荡荡的家。这是日本某节目组在2017年12月9日做的测试。 
+毋庸置疑，“中国制造”的日用品已经在世界市场，培养出牢牢的用户粘性。殊不知，“中国制造”下的影视国度也在悄然崛起，虽然暂时比不上欧美的“帝国”，但是我们接地气啊，国产电视剧也有“世界梦”！</span></p>
+        </div>
+      </div>
+    </header>
+		
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 order-2">
+            <div class="p-5">
+			<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="1" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript" >
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('1'));
+        // 指定图表的配置项和数据
+        var option = {
+			title: {
+                text: '国产电视节目进出口总量（2011-2015）',
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+				left:'right',
+                data: ['出口减进口', '进口', '出口']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'value'
+            }],
+            yAxis: [{
+                type: 'category',
+                axisTick: {
+                    show: false
+                },
+                data: ['2011', '2012', '2013', '2014', '2015']
+            }],
+            series: [{
+                name: '出口减进口',
+                type: 'bar',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside'
+                    }
+                },
+				itemStyle: {
+                    normal: {
+                        color: '#FFC107',
+                    },
+                },
+                data: [3867, 24484, 2327, -4419, -5757]
+            }, {
+                name: '出口',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true
+                    }
+                },
+				itemStyle: {
+                    normal: {
+                        color: '#607D8B',
+                    },
+                },
+                data: [25657, 37573, 21270, 21670, 25352]
+            }, {
+                name: '进口',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'left'
+                    }
+                },
+				itemStyle: {
+                    normal: {
+                        color: '#BDBDBD',
+                    },
+                },
+                data: [21790, 13089, 18943, 26089, 31109]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;right:0%;position: absolute;"></br>数据来源：国家统计局-中国电视节目进出口统计年报</br>采集时间：2017年10月</span></p>
+	</div>
+				
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>国产电视节目闯世界的反响如何？</span></h2>
+              <p><span style="line-height:15px;">2016年全国影视节目出口额近1.2亿美元，约占该年总出口贸易额的0.006%。能达到这个成就，中国电视剧前五年的积淀也是必不可少。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" >
+        <div class="row-2 align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="2" style="width: 560px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('2'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '国产电视节目进出口趋势',
+                subtext: '(2011年-2015年) 单位/时'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+				left:'36%',
+                data: ['进口总量', '出口总量']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: {
+                        readOnly: false
+                    },
+                    magicType: {
+                        type: ['line', 'bar']
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ["2011", "2012", "2013", "2014", "2015"]
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+
+                }
+            },
+            series: [{
+                name: '进口总量',
+                type: 'line',
+				itemStyle: {
+                    normal: {
+                        color: '#FFC107',
+                    },
+                },
+                data: [21790, 13089, 18943, 26089, 31109],
+                markPoint: {
+                    data: [{
+                        type: 'max',
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        name: '最小值'
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: 'average',
+                        name: '平均值'
+                    }]
+                }
+            }, {
+                name: '出口总量',
+                type: 'line',
+				itemStyle: {
+                    normal: {
+                        color: '#455A64',
+                    },
+                },
+                data: [25657, 37573, 21270, 21670, 25352],
+                markPoint: {
+                    data: [{
+                        name: '周最低',
+                        value: -2,
+                        xAxis: 1,
+                        yAxis: -1.5
+                    }]
+                },
+                markLine: {
+                    data: [{
+                            type: 'average',
+                            name: '平均值'
+                        },
+                        [{
+                            symbol: 'none',
+                            x: '90%',
+                            yAxis: 'max'
+                        }, {
+                            symbol: 'circle',
+                            label: {
+                                normal: {
+                                    position: 'start',
+                                    formatter: '最大值'
+                                }
+                            },
+                            type: 'max',
+                            name: '最高点'
+                        }]
+                    ]
+                }
+            }]
+        };
+
+
+        //使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;left:35%;position: absolute;">数据来源：国家统计局-中国电视节目进出口统计年报</br>采集时间：2017年10月</span></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>2012年，发生了什么？</span></h2>
+              <p>通过左图可以明显看出，2012年国产电视节目出口总量远远大于进口量，达到五年之最。2011年是中国的经济转型年，十二五规划指出对新型战略产业、电子信息产业等推行结构性减税，加快我国传统产业转型，一定程度上为国产剧的涌现及走出国门提供良好的社会环境。2012年文化体制改革全面推进，政府重点加大对文化产品创作生产的引导，着力构建全方位多层次宽领域的文化走出去格局，进一步增强了国产电视节目出口的热情，最终实现近五年以来的出口最高峰。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-4">
+              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="3" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('3'));
+        var myData = ['欧洲', '非洲', '美洲', '东南亚', '大洋洲', '美国', '日本', '韩国', '中国香港', '中国台湾'];
+        var databeast = {
+            2011: [8224, 9, 8027, 1133, 66, 6905, 86, 583, 914, 362],
+            2012: [5130, 1, 8138, 619, 282, 4061, 166, 1299, 1225, 252],
+            2013: [6657, 11, 9406, 813, 119, 4603, 1299, 1383, 3612, 187],
+            2014: [7217, 3, 12281, 1239, 70, 6074, 3088, 3348, 3371, 1543],
+            2015: [6447, 49, 13391, 204, 217, 5918, 14063, 1038, 1166, 445],
+
+        };
+        var databeauty = {
+            2011: [888, 1294, 15404, 5217, 52, 8455, 625, 1039, 2775, 2318],
+            2012: [916, 283, 33784, 5554, 3179, 15538, 242, 695, 2775, 5442],
+            2013: [1065, 1240, 19997, 3549, 210, 9380, 561, 763, 1481, 1782],
+            2014: [695, 314, 13031, 3410, 208, 4559, 261, 505, 1178, 2994],
+            2015: [594, 891, 12585, 7355, 129, 5761, 219, 784, 3428, 2872],
+
+
+        };
+        var timeLineData = [2011, 2012, 2013, 2014, 2015];
+        // 指定图表的配置项和数据
+        var option = {
+            baseOption: {
+                backgroundColor: '#FFF',
+                timeline: {
+                    show: true,
+                    axisType: 'category',
+                    tooltip: {
+                        show: true,
+                        formatter: function(params) {
+                            console.log(params);
+                            return params.name + '历年电视节目进出口统计';
+                        }
+                    },
+                    autoPlay: true,
+                    currentIndex: 6,
+                    playInterval: 1000,
+                    label: {
+                        normal: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value}年',
+                        },
+                    },
+                    data: [],
+                },
+                title: {
+                    //   text:'大北京景点帅哥美女统计', 
+                    textStyle: {
+                        color: '#000',
+                        fontSize: 16,
+                    },
+
+                },
+                legend: {
+					left:'40%',
+                    data: ['进口量', '出口量'],
+                    top: 4,
+                    right: '33%',
+                    textStyle: {
+                        color: '#000',
+                    },
+                },
+                tooltip: {
+                    show: true,
+                    trigger: 'axis',
+                    formatter: '{b}<br/>{a}: {c}时',
+                    axisPointer: {
+                        type: 'shadow',
+                    }
+                },
+
+                toolbox: {
+                    right: 20,
+                    feature: {
+                        saveAsImage: {},
+                        restore: {},
+                        dataView: {},
+                        dataZoom: {},
+                        magicType: {
+                            type: ['line', 'bar']
+                        },
+                        // brush: {},
+                    }
+                },
+
+                grid: [{
+                    show: false,
+                    left: '4%',
+                    top: 60,
+                    bottom: 60,
+                    containLabel: true,
+                    width: '46%',
+                }, {
+                    show: false,
+                    left: '50.5%',
+                    top: 80,
+                    bottom: 60,
+                    width: '0%',
+                }, {
+                    show: false,
+                    right: '4%',
+                    top: 60,
+                    bottom: 60,
+                    containLabel: true,
+                    width: '46%',
+                }, ],
+
+                xAxis: [{
+                    type: 'value',
+                    inverse: true,
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    position: 'top',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#B2B2B2',
+                            fontSize: 12,
+                        },
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#1F2022',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                }, {
+                    gridIndex: 1,
+                    show: false,
+                }, {
+                    gridIndex: 2,
+                    type: 'value',
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    position: 'top',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#B2B2B2',
+                            fontSize: 12,
+                        },
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#1F2022',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                }, ],
+                yAxis: [{
+                    type: 'category',
+                    inverse: true,
+                    position: 'right',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false,
+                        margin: 8,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData,
+                }, {
+                    gridIndex: 1,
+                    type: 'category',
+                    inverse: true,
+                    position: 'left',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData.map(function(value) {
+                        return {
+                            value: value,
+                            textStyle: {
+                                align: 'center',
+                            }
+                        }
+                    }),
+                }, {
+                    gridIndex: 2,
+                    type: 'category',
+                    inverse: true,
+                    position: 'left',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData,
+                }, ],
+                series: [],
+
+            },
+
+            options: [],
+
+
+        };
+
+        for (var i = 0; i < timeLineData.length; i++) {
+            option.baseOption.timeline.data.push(timeLineData[i]);
+            option.options.push({
+                title: {
+                    text: '国产电视节目' + timeLineData[i] + '进出口统计图',
+                },
+                series: [{
+                        name: '进口量',
+                        type: 'bar',
+                        barGap: 20,
+                        barWidth: 20,
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                            emphasis: {
+                                show: true,
+                                position: 'left',
+                                offset: [0, 0],
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 14,
+                                },
+                            },
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#455A64',
+                            },
+                            emphasis: {
+                                color: '#607D8B',
+                            },
+                        },
+                        data: databeast[timeLineData[i]],
+                    },
+
+
+                    {
+                        name: '出口量',
+                        type: 'bar',
+                        barGap: 20,
+                        barWidth: 20,
+                        xAxisIndex: 2,
+                        yAxisIndex: 2,
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                            emphasis: {
+                                show: true,
+                                position: 'right',
+                                offset: [0, 0],
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 14,
+                                },
+                            },
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#FFC107',
+                            },
+                            emphasis: {
+                                color: '#FFC107',
+                            },
+                        },
+                        data: databeauty[timeLineData[i]],
+                    }
+                ]
+            });
+        }
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;right:17%;position: absolute;"></br>数据来源：国家统计局-中国电视节目进出口统计年报</br>采集时间：2017年10月</span></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>中国电视节目横扫非洲</span></h2>
+              <p>这几年中国影视剧在非洲大陆热播，在赞比亚国家电视台播出《野鸭子》时，首播收视人群就达到200万，收视率达到40%。坦桑尼亚国家电视台调查显示，70%的观众收看过《媳妇的美好时代》，坦桑尼亚国家电视台在黄金时段的收视率曾经达到52%的历史最高纪录，较之前收视率最高的电视剧（其他国家电视剧）要高出4倍。</br></br>现如今，国产剧开始进入快速海外出口时期，不同国家和地区的“口味”不同，受欢迎的国产剧也不一样。当越南网友打开本土最大的网站zing TV时，《鬼吹灯之牧野诡事》赫然挂在主页最醒目的位置，下面的推介位置还有已播出三年的《何以笙箫默》；在欧美，两年前《甄嬛传》登陆美国付费平台Netflix还曾引发全国轰动，但刚刚收官的《楚乔传》《三生三世十里桃花》也早已在开播时就官方同步在Youtube上线，预计半年后还将在海外各国的主流平台登陆。从2011到2015年五年时间内，我国电视节目出口走向可见右图。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	<section>
+      <div class="container">
+        <div class="row-1 align-items-right">
+          <div class="col-md-6">
+            <div class="p-1">
+              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="4" style="width: 600px;height:580px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('4'));
+
+        // 指定图表的配置项和数据
+        var option = {
+			title: {
+                text: '2010-2016年度国产剧海外传播图',
+            },
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [{
+                type: 'graph',
+                tooltip: {},
+                ribbonType: true,
+                layout: 'circular',
+
+                circular: {
+                    rotateLabel: true
+                },
+                symbolSize: 30,
+                roam: true,
+                focusNodeAdjacency: true,
+
+                label: {
+                    normal: {
+                        position: 'center',
+                        fontWeight: 'bold',
+                        formatter: '{b}',
+                        normal: {
+                            textStyle: {
+
+                                fontFamily: '宋体'
+                            }
+                        }
+                    }
+                },
+
+                edgeSymbol: ['circle'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    normal: {
+                        textStyle: {
+                            fontSize: 13,
+                            fontWeight: 'bold',
+                            fontFamily: '宋体'
+                        }
+                    }
+                },
+
+                itemStyle: {
+                    normal: {
+                        label: {
+                            rotate: true,
+                            show: true,
+                            textStyle: {
+                                color: '#333',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        color: ["#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7"] /* 内的颜色#393f51，外的颜色#85d6f7 */
+                    },
+                    emphasis: {
+                        label: {
+                            show: true
+                                // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                        }
+                    }
+                },
+
+                data: [{
+                    name: '《芈月传》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《琅琊榜》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《虎妈猫爸》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《北京青年》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《步步惊心》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《甄嬛传》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《新三国主义》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《美人心计》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《媳妇的美好时代》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '北美',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64 '
+                        }
+                    }
+                }, {
+                    name: '韩国',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64 '
+                        }
+                    }
+                }, {
+                    name: '日本',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '非洲坦桑尼亚',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '东南亚',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '欧洲',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '埃及 赞比亚 肯尼亚等',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '全球同播',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }],
+                // links: [],
+                links: [{
+                        source: '《芈月传》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《芈月传》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《琅琊榜》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《琅琊榜》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《虎妈猫爸》',
+                        target: '全球同播',
+                        name: '家庭 都市',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《北京青年》',
+                        target: '埃及 赞比亚 肯尼亚等',
+                        name: '励志 青春 偶像',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《步步惊心》',
+                        target: '日本',
+                        name: '古装 历史 穿越 ',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《步步惊心》',
+                        target: '韩国',
+                        name: '古装 历史 穿越 ',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '日本',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '日本',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '韩国',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '欧洲',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '日本',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '韩国',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '东南亚',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '非洲坦桑尼亚',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '日本',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '北美',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    },
+
+
+                ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;left:26%;position: absolute;"></br>数据来源：网络新闻，电子文献，期刊杂志和二十一世纪福克斯公司</br>采集时间：2017年10月</span></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>“台词越少，越受欢迎”</span></h2>
+              <p>就出口数量来看，古装剧对于海外市场来说是“刚需”。从《新三国主义》《甄嬛传》，到《琅琊榜》《芈月传》，中国古装剧占据海外市场的一大板块。在韩国街头的一家租车店内，女老板娘全程抱着平板电脑看《琅琊榜》，甚至跟进店顾客热烈讨论起了剧情。古装剧之所以受欢迎，主要在于其内容上没有太多限制，背景大多数取材于历史记载或架空想象，没有太多文化属性，世界各地接受程度更高。
+</br></br>但不是所有的古装剧都在国外畅通无阻，比如，在国内赚取超高收视率的《甄嬛传》在美国市场反响一般，主要是美国观众对中国的历史，社会制度等的不了解影响到了对作品的认可度。我国在海外受欢迎的大多是功夫片，因为功夫片主要是台词少，动作多，观众通过形体动作即能较好的理解影片内容。但不是所有的古装剧都在国外畅通无阻，比如，在国内赚取超高收视率的《甄嬛传》在美国市场反响一般，主要是美国观众对中国的历史，社会制度等的不了解影响到了对作品的认可度。我国在海外受欢迎的大多是功夫片，因为功夫片主要是台词少，动作多，观众通过形体动作即能较好的理解影片内容。
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	 <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid " src="https://cloud-minapp-2277.cloud.ifanrusercontent.com/1eONpMTyfWMXmsMg.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>中国式家庭关系题材拥有大量“黑”粉</span></h2>
+              <p>近年来，现实题材电视剧的出口数量和金额都在大幅增长，出口电视剧题材越来越广泛。相较古装剧，现代题材的海外市场明显更有局限性，发行地区仍以东南亚和非洲国家为主。2011年，《媳妇的美好时代》已被引进到坦桑尼亚，讲着斯瓦西里语的毛豆豆几乎引发了“万人空巷”的收视热潮，以至于很多当地人看到中国女人就会用中文喊“豆豆”，就连当地的配音演员都成了大明星爆红，走在街上都不敢随随便便露脸。
+</br></br>后来，我国先后又将《奋斗》、《我的青春谁做主》、《北京青年》等40多部近千集国内影视剧译制成当地语言，在肯尼亚、埃及、塞内加尔和赞比亚等46个国家播出。这些现代题材的剧中展现的代际沟通、房子问题、情感问题，婆媳问题，不但内地有，在海外也引起了人们的共鸣。
+</br></br>中国当代都市电视剧在非洲吸引大量“黑”粉，主要原因是在这些影视剧中非洲观众能够找到情感共鸣和代入感，同时也能通过这些电视剧了解到他们很好奇的遥远的中国人的生活。
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid" src="http://m.qpic.cn/psb?/V12oN3I72Ka1KG/KvIGmm4FvDl.16OFdcvuWDjarAnTFW73vVHYW3fkA14!/b/dPIAAAAAAAAA&bo=gAKAAgAAAAADByI!&rf=viewer_4" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4"><span style=font-size:45px>播的是电视剧，卖的是文化</span></h2>
+              <p>根据2009~2014年政府出台的一系列政策，从中分析出一些高频词。政策落实了对文化出口重点企业和项目的扶持措施。目前，我国文化产业在海外的影响力仍有不足，但在利好政策推动下，我国对外文化贸易正“全面追赶”。
+</br></br>近年来，在一带一路框架下，中国与非洲的距离越来越近。一带一路沿线各国文化多样性程度极高，每个国家内部还有特殊情况，要想实现文化认同，不可急于求成。诚然，国产电视剧的出口规模和经济收益尚处于初级阶段，但前景广阔是毫无疑问的。在未来的发展过程中，国产电视剧的内容质量依旧是王道，由于文化背景的差异，国产剧海外播出一定要配合必要的营销。要研究海外受众的收视习惯和审美趣味，善于利用新媒体制造话题互动，不断提高国产剧开拓海外市场的软实力。
+
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">数据来源：国家统计局、网络新闻、电子文献、期刊杂志、二十一世纪福克斯公司</p>
+		<p class="m-0 text-center text-white">作者团队：张卓&nbsp;&nbsp;王堰楠&nbsp;&nbsp;马燕柔&nbsp;&nbsp;张银燕</p>
+		<p class="m-0 text-center text-white">TEL：13560022098&nbsp;&nbsp;E-mail：1532086435@qq.com</p>
+		<p class="m-0 text-center text-white">指导老师：吴小坤</p>
+		<p class="m-0 text-center text-white">Copyright &copy 1996-2017 SINA Corporation, All Rights Reserved</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

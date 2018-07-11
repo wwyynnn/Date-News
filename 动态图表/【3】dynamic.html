@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>【3】dynamic</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var myData = ['欧洲', '非洲', '美洲', '东南亚', '大洋洲', '美国', '日本', '韩国', '中国香港', '中国台湾'];
+        var databeast = {
+            2011: [8224, 9, 8027, 1133, 66, 6905, 86, 583, 914, 362],
+            2012: [5130, 1, 8138, 619, 282, 4061, 166, 1299, 1225, 252],
+            2013: [6657, 11, 9406, 813, 119, 4603, 1299, 1383, 3612, 187],
+            2014: [7217, 3, 12281, 1239, 70, 6074, 3088, 3348, 3371, 1543],
+            2015: [6447, 49, 13391, 204, 217, 5918, 14063, 1038, 1166, 445],
+
+        };
+        var databeauty = {
+            2011: [888, 1294, 15404, 5217, 52, 8455, 625, 1039, 2775, 2318],
+            2012: [916, 283, 33784, 5554, 3179, 15538, 242, 695, 2775, 5442],
+            2013: [1065, 1240, 19997, 3549, 210, 9380, 561, 763, 1481, 1782],
+            2014: [695, 314, 13031, 3410, 208, 4559, 261, 505, 1178, 2994],
+            2015: [594, 891, 12585, 7355, 129, 5761, 219, 784, 3428, 2872],
+
+
+        };
+        var timeLineData = [2011, 2012, 2013, 2014, 2015];
+        // 指定图表的配置项和数据
+        var option = {
+            baseOption: {
+                backgroundColor: '#FFF',
+                timeline: {
+                    show: true,
+                    axisType: 'category',
+                    tooltip: {
+                        show: true,
+                        formatter: function(params) {
+                            console.log(params);
+                            return params.name + '历年电视节目进出口统计';
+                        }
+                    },
+                    autoPlay: true,
+                    currentIndex: 6,
+                    playInterval: 1000,
+                    label: {
+                        normal: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value}年',
+                        },
+                    },
+                    data: [],
+                },
+                title: {
+                    //   text:'大北京景点帅哥美女统计', 
+                    textStyle: {
+                        color: '#000',
+                        fontSize: 16,
+                    },
+
+                },
+                legend: {
+                    data: ['进口量', '出口量'],
+                    top: 4,
+                    right: '20%',
+                    textStyle: {
+                        color: '#000',
+                    },
+                },
+                tooltip: {
+                    show: true,
+                    trigger: 'axis',
+                    formatter: '{b}<br/>{a}: {c}时',
+                    axisPointer: {
+                        type: 'shadow',
+                    }
+                },
+
+                toolbox: {
+                    right: 20,
+                    feature: {
+                        saveAsImage: {},
+                        restore: {},
+                        dataView: {},
+                        dataZoom: {},
+                        magicType: {
+                            type: ['line', 'bar']
+                        },
+                        // brush: {},
+                    }
+                },
+
+                grid: [{
+                    show: false,
+                    left: '4%',
+                    top: 60,
+                    bottom: 60,
+                    containLabel: true,
+                    width: '46%',
+                }, {
+                    show: false,
+                    left: '50.5%',
+                    top: 80,
+                    bottom: 60,
+                    width: '0%',
+                }, {
+                    show: false,
+                    right: '4%',
+                    top: 60,
+                    bottom: 60,
+                    containLabel: true,
+                    width: '46%',
+                }, ],
+
+                xAxis: [{
+                    type: 'value',
+                    inverse: true,
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    position: 'top',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#B2B2B2',
+                            fontSize: 12,
+                        },
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#1F2022',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                }, {
+                    gridIndex: 1,
+                    show: false,
+                }, {
+                    gridIndex: 2,
+                    type: 'value',
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    position: 'top',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#B2B2B2',
+                            fontSize: 12,
+                        },
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#1F2022',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                }, ],
+                yAxis: [{
+                    type: 'category',
+                    inverse: true,
+                    position: 'right',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false,
+                        margin: 8,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData,
+                }, {
+                    gridIndex: 1,
+                    type: 'category',
+                    inverse: true,
+                    position: 'left',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData.map(function(value) {
+                        return {
+                            value: value,
+                            textStyle: {
+                                align: 'center',
+                            }
+                        }
+                    }),
+                }, {
+                    gridIndex: 2,
+                    type: 'category',
+                    inverse: true,
+                    position: 'left',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: false,
+                        textStyle: {
+                            color: '#9D9EA0',
+                            fontSize: 12,
+                        },
+
+                    },
+                    data: myData,
+                }, ],
+                series: [],
+
+            },
+
+            options: [],
+
+
+        };
+
+        for (var i = 0; i < timeLineData.length; i++) {
+            option.baseOption.timeline.data.push(timeLineData[i]);
+            option.options.push({
+                title: {
+                    text: '国产电视节目' + timeLineData[i] + '进出口统计图',
+                },
+                series: [{
+                        name: '进口量',
+                        type: 'bar',
+                        barGap: 20,
+                        barWidth: 20,
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                            emphasis: {
+                                show: true,
+                                position: 'left',
+                                offset: [0, 0],
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 14,
+                                },
+                            },
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#455A64',
+                            },
+                            emphasis: {
+                                color: '#607D8B',
+                            },
+                        },
+                        data: databeast[timeLineData[i]],
+                    },
+
+
+                    {
+                        name: '出口量',
+                        type: 'bar',
+                        barGap: 20,
+                        barWidth: 20,
+                        xAxisIndex: 2,
+                        yAxisIndex: 2,
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                            emphasis: {
+                                show: true,
+                                position: 'right',
+                                offset: [0, 0],
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 14,
+                                },
+                            },
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#FFC107',
+                            },
+                            emphasis: {
+                                color: '#FFC107',
+                            },
+                        },
+                        data: databeauty[timeLineData[i]],
+                    }
+                ]
+            });
+        }
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;left:10%;position: absolute;">数据来源：国家统计局-中国电视节目进出口统计年报</br>采集时间：2017年10月</span></p>
+</body>
+
+</html>

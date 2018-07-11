@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>【4】中国电视剧海外传播图</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 640;height:620px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [{
+                type: 'graph',
+                tooltip: {},
+                ribbonType: true,
+                layout: 'circular',
+
+                circular: {
+                    rotateLabel: true
+                },
+                symbolSize: 30,
+                roam: true,
+                focusNodeAdjacency: true,
+
+                label: {
+                    normal: {
+                        position: 'center',
+                        fontWeight: 'bold',
+                        formatter: '{b}',
+                        normal: {
+                            textStyle: {
+
+                                fontFamily: '宋体'
+                            }
+                        }
+                    }
+                },
+
+                edgeSymbol: ['circle'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    normal: {
+                        textStyle: {
+                            fontSize: 13,
+                            fontWeight: 'bold',
+                            fontFamily: '宋体'
+                        }
+                    }
+                },
+
+                itemStyle: {
+                    normal: {
+                        label: {
+                            rotate: true,
+                            show: true,
+                            textStyle: {
+                                color: '#333',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        color: ["#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#393f51", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7", "#85d6f7"] /* 内的颜色#393f51，外的颜色#85d6f7 */
+                    },
+                    emphasis: {
+                        label: {
+                            show: true
+                                // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                        }
+                    }
+                },
+
+                data: [{
+                    name: '《芈月传》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《琅琊榜》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《虎妈猫爸》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《北京青年》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《步步惊心》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《甄嬛传》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《新三国主义》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《美人心计》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '《媳妇的美好时代》',
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC107'
+                        }
+                    }
+                }, {
+                    name: '北美',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64 '
+                        }
+                    }
+                }, {
+                    name: '韩国',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64 '
+                        }
+                    }
+                }, {
+                    name: '日本',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '非洲坦桑尼亚',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '东南亚',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '欧洲',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '埃及 赞比亚 肯尼亚等',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }, {
+                    name: '全球同播',
+                    itemStyle: {
+                        normal: {
+                            color: '#455A64'
+                        }
+                    }
+                }],
+                // links: [],
+                links: [{
+                        source: '《芈月传》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《芈月传》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《琅琊榜》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《琅琊榜》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《虎妈猫爸》',
+                        target: '全球同播',
+                        name: '家庭 都市',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《北京青年》',
+                        target: '埃及 赞比亚 肯尼亚等',
+                        name: '励志 青春 偶像',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《步步惊心》',
+                        target: '日本',
+                        name: '古装 历史 穿越 ',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《步步惊心》',
+                        target: '韩国',
+                        name: '古装 历史 穿越 ',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '北美',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '日本',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#6c70c0'
+                            }
+                        }
+                    }, {
+                        source: '《甄嬛传》',
+                        target: '韩国',
+                        name: '古装 历史 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#fcae00'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '日本',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '韩国',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《新三国主义》',
+                        target: '欧洲',
+                        name: '历史 传奇 战争',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '日本',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '韩国',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《美人心计》',
+                        target: '东南亚',
+                        name: '古装 宫廷',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '非洲坦桑尼亚',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '日本',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    }, {
+                        source: '《媳妇的美好时代》',
+                        target: '北美',
+                        name: '家庭伦理',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function(params, ticket, callback) {
+                                return params.data.name;
+                            }
+                        },
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                formatter: function(params, ticket, callback) {
+                                    params.name = params.data.name;
+                                    return params.name;
+                                },
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 0.5,
+                                curveness: 0.2,
+                                color: '#37bfe9'
+                            }
+                        }
+                    },
+
+
+                ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+		<p><span style="font-size:10px;left:50%;position: absolute;"></br>数据来源：网络新闻，电子文献，期刊杂志和二十一世纪福克斯公司</br>采集时间：2017年10月</span></p>
+</body>
+
+</html>
